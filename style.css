@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, Helvetica, sans-serif!important;
+}
+
+#chat {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #FAFAFA;
+    border: 1px solid #acacac;
+    padding: 1em;   
+    text-align: center;
+}
+
+#msg-input {
+    border: 1px solid #3498db;
+    width: 40%;
+    padding: 5px 10px;
+    font-size: 1.25em;
+}
+
+#submit {
+    width: 175px;
+    height: 50px;
+    border-radius: 0;
+    background-color: #43A047;
+    color: white;
+    font-size: 1.25em;
+    border: none;
+}
+
+#messages {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #34495e;
+}
+
+#messages p {
+    position: relative;
+    padding: 5px 10px;
+    cursor: default;
+    border: 1px dotted #fff;
+    transition: 0.5s;
+}
+
+#messages p:hover {
+    border: 1px dotted #333;
+    color: #000;
+}
+
+#messages p:hover::after {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    width: 32px;
+    content: "\2718";
+    color: #A40000;
+    border-radius: 50px;
+    background: #33333350;
+    cursor: pointer;
+}
