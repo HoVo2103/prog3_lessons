@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { font-family: Arial, Helvetica, sans-serif!important; }
+
+#container {
+    padding: 10px;
+}
+
+#control-panel {
+    margin-bottom: 5px;
+}
+
+#del-btn {
+    padding: 10px 15px;
+    background-color: #43A047;
+    color: white;
+    font-size: 1.25em;
+    border: none;
+    transition: 0.5s;
+}
+#del-btn:hover {
+    background-color: #333;
+    transform: blur(5px);
+}
