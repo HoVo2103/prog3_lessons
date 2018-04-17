@@ -2,8 +2,12 @@ var express = require('express');
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+var fs = require("fs");
 
 var messagesArr = [];
+var jsonArr = [];
+var jsonObj = {};
+fs.writeFile("messages.json", JSON.stringify(jsonObj));
 
 app.use(express.static("."));
 app.get('/', function (req, res) {
@@ -18,6 +22,9 @@ io.on('connection', function (socket) {
 
     socket.on("send message", function (data) {
         messagesArr.push(data);
+        jsonArr.push(data);
+        jsonObj = {"messages": jsonArr};
+        fs.writeFile("messages.json", JSON.stringify(jsonObj, null, "\t"));
         io.sockets.emit("display message", data);
     });
 

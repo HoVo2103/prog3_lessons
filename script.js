@@ -24,6 +24,7 @@ function main() {
         p.innerText = msg;
         messages.appendChild(p);
         msg_input.value = "";
+        msg_input.focus();
     }
 
     function delMsg() {

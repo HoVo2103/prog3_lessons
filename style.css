@@ -19,14 +19,18 @@ body {
     font-size: 1.25em;
 }
 
-#submit {
-    width: 175px;
-    height: 50px;
+#submit, #delete {
+    min-width: 200px;
+    height: 35px;
     border-radius: 0;
     background-color: #43A047;
     color: white;
     font-size: 1.25em;
     border: none;
+}
+#submit:hover, #delete:hover {
+    background-color: #43A047;
+    color: white;
 }
 
 #messages {
@@ -46,16 +50,4 @@ body {
 #messages p:hover {
     border: 1px dotted #333;
     color: #000;
-}
-
-#messages p:hover::after {
-    position: absolute;
-    top: -15px;
-    right: -10px;
-    width: 32px;
-    content: "\2718";
-    color: #A40000;
-    border-radius: 50px;
-    background: #33333350;
-    cursor: pointer;
 }
